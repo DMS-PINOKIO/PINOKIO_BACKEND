@@ -19,6 +19,8 @@ public class ImageServiceImpl implements ImageService {
         System.out.println(file.getContentType());
         System.out.println(file.getName());
         System.out.println(file.isEmpty());
+        System.out.println(file.getSize());
+        System.out.println(file.getOriginalFilename());
         return this.aiClient.brailleUpload(file);
     }
 
