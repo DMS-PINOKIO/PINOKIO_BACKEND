@@ -15,11 +15,13 @@ public class ImageServiceImpl implements ImageService {
 
     @Override
     public BrailleResponse brailleUpload(MultipartFile file) {
+        System.out.println(file);
         return this.aiClient.brailleUpload(file);
     }
 
     @Override
     public OcrResponse ocrUpload(MultipartFile file) {
+        System.out.println(file);
         return this.aiClient.ocrUpload(file);
     }
 }
