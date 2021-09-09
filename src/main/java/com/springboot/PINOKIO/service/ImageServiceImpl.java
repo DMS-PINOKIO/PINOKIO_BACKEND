@@ -15,7 +15,10 @@ public class ImageServiceImpl implements ImageService {
 
     @Override
     public BrailleResponse brailleUpload(MultipartFile file) {
-        System.out.println(file);
+        System.out.println(file.toString());
+        System.out.println(file.getContentType());
+        System.out.println(file.getName());
+        System.out.println(file.isEmpty());
         return this.aiClient.brailleUpload(file);
     }
 
