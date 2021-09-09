@@ -17,12 +17,12 @@ public class ImageController {
 
     private final ImageService imageService;
 
-    @GetMapping("braille")
+    @PostMapping("braille")
     public ResponseEntity<BrailleResponse> brailleUpload(@ModelAttribute("file") MultipartFile file) {
         return new ResponseEntity<>(imageService.brailleUpload(file), HttpStatus.OK);
     }
 
-    @GetMapping("ocr")
+    @PostMapping("ocr")
     public ResponseEntity<OcrResponse> ocrUpload(@ModelAttribute("file") MultipartFile file) {
         return new ResponseEntity<>(imageService.ocrUpload(file), HttpStatus.OK);
     }
