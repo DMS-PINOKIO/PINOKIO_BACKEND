@@ -26,7 +26,12 @@ public class ImageServiceImpl implements ImageService {
 
     @Override
     public OcrResponse ocrUpload(MultipartFile file) {
-        System.out.println(file);
+        System.out.println(file.toString());
+        System.out.println(file.getContentType());
+        System.out.println(file.getName());
+        System.out.println(file.isEmpty());
+        System.out.println(file.getSize());
+        System.out.println(file.getOriginalFilename());
         return this.aiClient.ocrUpload(file);
     }
 }
