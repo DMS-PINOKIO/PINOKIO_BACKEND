@@ -1,6 +1,7 @@
 package com.springboot.PINOKIO.service;
 
 import com.springboot.PINOKIO.dto.BrailleResponse;
+import com.springboot.PINOKIO.dto.OcrResponse;
 import com.springboot.PINOKIO.util.api.client.AiClient;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
@@ -15,5 +16,10 @@ public class ImageServiceImpl implements ImageService {
     @Override
     public BrailleResponse brailleUpload(MultipartFile file) {
         return this.aiClient.brailleUpload(file);
+    }
+
+    @Override
+    public OcrResponse ocrUpload(MultipartFile file) {
+        return this.aiClient.ocrUpload(file);
     }
 }
