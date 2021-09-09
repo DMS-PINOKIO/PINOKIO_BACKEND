@@ -1,11 +1,9 @@
 package com.springboot.PINOKIO.dto;
 
-import lombok.Getter;
-import lombok.RequiredArgsConstructor;
+import lombok.*;
 
 @Getter
-@RequiredArgsConstructor
 public class BrailleResponse {
 
-    private final String braille;
+    private String braille;
 }
